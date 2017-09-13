@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[10pt,russian]{article}
 
 \usepackage[a4paper, hmargin=25mm, vmargin=30mm, top=20mm]{geometry} % Use A4 paper and set margins
 \usepackage{longtable}
@@ -6,10 +6,21 @@
 \usepackage{enumitem}
 \usepackage{fancyhdr} % Customize the header and footer
 \usepackage{lastpage} % Required for calculating the number of pages in the document
-\usepackage{hyperref} % Colors for links, text and headings
+\usepackage[unicode=true]{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \setcounter{secnumdepth}{0} % Suppress section numbering
 
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[T2A]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=Maroon,
+  citecolor=Blue,
+  urlcolor=Blue,
+  breaklinks=true
+}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -23,6 +34,9 @@
 \pagestyle{plain} % Use the custom page style through the document
 \renewcommand{\headrulewidth}{0pt} % Disable the default header rule
 \renewcommand{\footrulewidth}{0pt} % Disable the default footer rule
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \setlength\parindent{0pt} % Stop paragraph indentation
 
